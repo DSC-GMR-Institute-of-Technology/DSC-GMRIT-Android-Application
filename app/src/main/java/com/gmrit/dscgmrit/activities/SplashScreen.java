@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.gmrit.dscgmrit.R;
 
@@ -28,15 +29,14 @@ public class SplashScreen extends AppCompatActivity {
 
         imgLogo.setAnimation(anim);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        try {
 
-                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        }, SPLASH_TIMER);
+            Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+            wait(4000);
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(SplashScreen.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 
     }
 }

@@ -1,6 +1,8 @@
 package com.gmrit.dscgmrit.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.gmrit.dscgmrit.R;
+import com.gmrit.dscgmrit.activities.EventDetailsActivity;
+import com.gmrit.dscgmrit.activities.EventsActivity;
 import com.gmrit.dscgmrit.modals.EventData;
 
 import java.util.List;
@@ -40,7 +44,13 @@ public class EventsDisplayAdapter extends RecyclerView.Adapter<EventsDisplayAdap
         holder.txtLearnMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Button Clicked at Event " + eventDataList.get(position).getEventName(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(context, EventDetailsActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("eventName",eventDataList.get(position).getEventName());
+                bundle.putInt("eventImage", eventDataList.get(position).getImages());
+                intent.putExtras(bundle);
+                context.startActivity(intent);
             }
         });
 
