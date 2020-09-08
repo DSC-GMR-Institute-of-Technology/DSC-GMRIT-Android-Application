@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".activities.EventsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Events"
+        android:fontFamily="@font/googlesans_bold"
+        android:textSize="25dp"
+        android:textColor="#000"
+        android:layout_margin="10dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/txtUpcoming"
+                android:background="@drawable/blue_bg_textview"
+                android:textSize="16dp"
+                android:textColor="#fff"
+                android:fontFamily="@font/googlesans_regular"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:text="Upcoming" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/txtCompleted"
+                android:padding="7dp"
+                android:textColor="#000"
+                android:fontFamily="@font/googlesans_regular"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:text="Completed" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/eventsList"
+        android:layout_marginTop="5dp" />
+
+
+
+
+</LinearLayout>
