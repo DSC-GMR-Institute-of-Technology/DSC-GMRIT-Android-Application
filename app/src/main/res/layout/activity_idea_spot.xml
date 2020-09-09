@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,18 +7,231 @@
     tools:context=".activities.general.IdeaSpotActivity"
     android:orientation="vertical"
     android:padding="15dp"
-    android:background="#ffffff"
-    >
-    <LinearLayout
+    android:background="#ffffff">
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="50dp"
+                android:paddingLeft="-5dp"
+                android:paddingRight="-5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ideas_stock"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/selectedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Everything begins with an Idea"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/yellow_bg_textview"
+                android:fontFamily="@font/googlesans_regular"
+                android:textColor="#fff"
+                android:padding="8dp"
+                android:textSize="16dp"
+                android:layout_margin="13dp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name of Student"
+                app:boxStrokeColor="@color/colorBlue"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="#000"
+                android:layout_margin="8dp"
+                app:hintTextColor="@color/colorBlue"
+                app:startIconDrawable="@drawable/ic_baseline_person_outline_24"
+                app:startIconTint="#000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:id="@+id/editName"
+                    android:inputType="text"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email ID"
+                app:boxStrokeColor="@color/colorBlue"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="#000"
+                android:layout_margin="8dp"
+                app:hintTextColor="@color/colorBlue"
+                app:startIconDrawable="@drawable/ic_email_black_24dp"
+                app:startIconTint="#000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:inputType="text"
+                    android:id="@+id/editMail"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                app:boxStrokeColor="@color/colorBlue"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="#000"
+                android:layout_margin="8dp"
+                app:hintTextColor="@color/colorBlue"
+                app:startIconDrawable="@drawable/ic_phone_black_24dp"
+                app:startIconTint="#000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:id="@+id/editPhone"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="JNTU Number"
+                app:boxStrokeColor="@color/colorBlue"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconTint="#000"
+                android:layout_margin="8dp"
+                app:startIconDrawable="@drawable/ic_baseline_assignment_24"
+                app:hintTextColor="@color/colorBlue"
+                app:startIconTint="#000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:id="@+id/jntu"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Explain Your Idea In One Sentence"
+                app:boxStrokeColor="@color/colorBlue"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/ic_baseline_emoji_objects_24"
+                app:endIconTint="#000"
+                android:layout_margin="8dp"
+                app:hintTextColor="@color/colorBlue"
+                app:startIconTint="#000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:id="@+id/Onesentence"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Summarize your idea"
+                app:boxStrokeColor="@color/colorBlue"
+                app:boxStrokeWidthFocused="2dp"
+                android:layout_margin="8dp"
+                app:startIconDrawable="@drawable/ic_baseline_message_24"
+                app:endIconTint="#000"
+                app:hintTextColor="@color/colorBlue"
+                app:startIconTint="#000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:id="@+id/editConfPassword"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:lineSpacingExtra="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="What makes your idea unique?"
+                app:boxStrokeColor="@color/colorBlue"
+                app:boxStrokeWidthFocused="2dp"
+                android:layout_margin="8dp"
+                app:endIconTint="#000"
+                app:startIconDrawable="@drawable/ic_baseline_check_circle_24"
+                app:hintTextColor="@color/colorBlue"
+                app:startIconTint="#000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:id="@+id/unique"
+                    android:textColor="#000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/blue_bg_textview"
+                android:text="Submit your Idea"
+                android:textAllCaps="false"
+                android:padding="8dp"
+                android:textColor="#fff" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/restaurantToolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:background="#fff"
         android:theme="@style/CardView.Light"
         app:titleMarginStart="40dp">
@@ -54,197 +267,4 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-
-
-
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/googlesans_bold"
-            android:text="Submit your Idea"
-            android:textColor="#000"
-            android:textSize="30dp"
-            android:layout_gravity="center"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="enter your name"
-                app:boxStrokeColor="@color/colorBlue"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="#000"
-                app:hintTextColor="@color/colorBlue"
-                app:startIconDrawable="@drawable/ic_edit_black_24dp"
-                app:startIconTint="#000">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:id="@+id/editName"
-                    android:inputType="text"
-                    android:textColor="#000" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter MailId"
-                app:boxStrokeColor="@color/colorBlue"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="#000"
-                app:hintTextColor="@color/colorBlue"
-                app:startIconDrawable="@drawable/ic_email_black_24dp"
-                app:startIconTint="#000">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:inputType="text"
-                    android:id="@+id/editMail"
-                    android:textColor="#000" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Phone Number"
-                app:boxStrokeColor="@color/colorBlue"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="#000"
-                app:hintTextColor="@color/colorBlue"
-                app:startIconDrawable="@drawable/ic_phone_black_24dp"
-                app:startIconTint="#000">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:inputType="number"
-                    android:maxLength="10"
-                    android:id="@+id/editPhone"
-                    android:textColor="#000" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="JNTU Number"
-                app:boxStrokeColor="@color/colorBlue"
-                app:boxStrokeWidthFocused="2dp"
-
-                app:endIconTint="#000"
-                app:hintTextColor="@color/colorBlue"
-                app:startIconTint="#000">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:id="@+id/jntu"
-                    android:textColor="#000" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Explain Your Idea In One Sentence"
-                app:boxStrokeColor="@color/colorBlue"
-                app:boxStrokeWidthFocused="2dp"
-
-                app:endIconTint="#000"
-                app:hintTextColor="@color/colorBlue"
-                app:startIconTint="#000">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:id="@+id/Onesentence"
-                    android:textColor="#000" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Summarize your idea"
-                app:boxStrokeColor="@color/colorBlue"
-                app:boxStrokeWidthFocused="2dp"
-
-                app:endIconTint="#000"
-                app:hintTextColor="@color/colorBlue"
-                app:startIconTint="#000">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:id="@+id/editConfPassword"
-                    android:inputType="textPassword"
-                    android:textColor="#000"
-                    android:lineSpacingExtra="8dp"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="What makes your idea unique?"
-                app:boxStrokeColor="@color/colorBlue"
-                app:boxStrokeWidthFocused="2dp"
-
-                app:endIconTint="#000"
-                app:hintTextColor="@color/colorBlue"
-                app:startIconTint="#000">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:id="@+id/unique"
-                    android:textColor="#000" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-            <Button
-                android:id="@+id/btnSubmit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:background="@color/colorYellow"
-                android:text="Submit"
-                android:textColor="#fff" />
-
-
-        </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+</RelativeLayout>
