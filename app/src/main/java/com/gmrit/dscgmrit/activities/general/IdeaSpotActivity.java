@@ -1,4 +1,4 @@
-package com.gmrit.dscgmrit;
+package com.gmrit.dscgmrit.activities.general;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class IdeaSpot extends AppCompatActivity {
+import com.gmrit.dscgmrit.R;
+
+public class IdeaSpotActivity extends AppCompatActivity {
 
     ImageView back;
 

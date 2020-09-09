@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Community_reg"></activity>
-        <activity android:name=".IdeaSpot" />
-        <activity android:name=".activities.FAQPage" />
-        <activity android:name=".activities.AboutPage" />
-        <activity android:name=".activities.EventDetailsActivity" />
-        <activity android:name=".activities.SplashScreen" />
-        <activity android:name=".activities.EventsActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.team.IndividualTeamDetailsActivity"></activity>
+        <activity android:name=".activities.team.TeamDisplayActivity" />
+        <activity android:name=".activities.events.EventRegistrationActivity" />
+        <activity android:name=".activities.general.CommunityRegistrationActivity" />
+        <activity android:name=".activities.general.IdeaSpotActivity" />
+        <activity android:name=".activities.general.FAQPage" />
+        <activity android:name=".activities.general.AboutPage" />
+        <activity android:name=".activities.events.EventDetailsActivity" />
+        <activity android:name=".activities.general.SplashScreen" />
+        <activity android:name=".activities.events.EventsDisplayActivity" />
+        <activity android:name=".activities.general.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

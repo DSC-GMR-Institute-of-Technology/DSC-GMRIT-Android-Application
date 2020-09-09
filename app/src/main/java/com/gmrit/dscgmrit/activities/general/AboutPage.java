@@ -1,4 +1,4 @@
-package com.gmrit.dscgmrit.activities;
+package com.gmrit.dscgmrit.activities.general;
 
 import androidx.appcompat.app.AppCompatActivity;
 

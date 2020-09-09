@@ -1,10 +1,12 @@
-package com.gmrit.dscgmrit;
+package com.gmrit.dscgmrit.activities.general;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Community_reg extends AppCompatActivity {
+import com.gmrit.dscgmrit.R;
+
+public class CommunityRegistrationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.gmrit.dscgmrit.activities;
+package com.gmrit.dscgmrit.activities.events;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,13 +13,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.gmrit.dscgmrit.R;
+import com.gmrit.dscgmrit.activities.general.MainActivity;
 import com.gmrit.dscgmrit.adapters.EventsDisplayAdapter;
 import com.gmrit.dscgmrit.modals.EventData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EventsActivity extends AppCompatActivity {
+public class EventsDisplayActivity extends AppCompatActivity {
 
     TextView txtUpcoming,txtCompleted;
     RecyclerView eventsList;
@@ -37,7 +38,7 @@ public class EventsActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EventsActivity.this,MainActivity.class);
+                Intent intent = new Intent(EventsDisplayActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -86,8 +87,8 @@ public class EventsActivity extends AppCompatActivity {
         eventDataList.add(new EventData("Web Dev Boot Camp", R.drawable.web));
         eventDataList.add(new EventData("Mobile App Development", R.drawable.googleandroid));
 
-        eventsDisplayAdapter = new EventsDisplayAdapter(EventsActivity.this, eventDataList);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(EventsActivity.this,LinearLayoutManager.VERTICAL,false);
+        eventsDisplayAdapter = new EventsDisplayAdapter(EventsDisplayActivity.this, eventDataList);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(EventsDisplayActivity.this,LinearLayoutManager.VERTICAL,false);
         eventsList.setLayoutManager(linearLayoutManager);
         eventsList.setAdapter(eventsDisplayAdapter);
 

@@ -8,15 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.gmrit.dscgmrit.R;
-import com.gmrit.dscgmrit.activities.EventDetailsActivity;
-import com.gmrit.dscgmrit.activities.EventsActivity;
+import com.gmrit.dscgmrit.activities.events.EventDetailsActivity;
 import com.gmrit.dscgmrit.modals.EventData;
 
 import java.util.List;

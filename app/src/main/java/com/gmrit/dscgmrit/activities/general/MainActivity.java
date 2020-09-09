@@ -1,4 +1,4 @@
-package com.gmrit.dscgmrit.activities;
+package com.gmrit.dscgmrit.activities.general;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,13 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.gmrit.dscgmrit.Community_reg;
-import com.gmrit.dscgmrit.IdeaSpot;
 import com.gmrit.dscgmrit.R;
+import com.gmrit.dscgmrit.activities.events.EventsDisplayActivity;
+import com.gmrit.dscgmrit.activities.team.TeamDisplayActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout eventsLayout, cardabout, faqs,ideas, community;
+    LinearLayout eventsLayout, cardabout, faqs,ideas, community,cardTeam;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +24,21 @@ public class MainActivity extends AppCompatActivity {
         faqs = findViewById(R.id.cardFAQs);
         ideas = findViewById(R.id.cardIdeas);
         community = findViewById(R.id.cardCommunity);
+        cardTeam = findViewById(R.id.cardTeam);
+
+        cardTeam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TeamDisplayActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         community.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Community_reg.class);
+                Intent intent = new Intent(MainActivity.this, CommunityRegistrationActivity.class);
                 startActivity(intent);
             }
         });
@@ -36,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         ideas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, IdeaSpot.class);
+                Intent intent = new Intent(MainActivity.this, IdeaSpotActivity.class);
                 startActivity(intent);
             }
         });
@@ -52,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         eventsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, EventsActivity.class);
+                Intent intent = new Intent(MainActivity.this, EventsDisplayActivity.class);
                 startActivity(intent);
             }
         });
