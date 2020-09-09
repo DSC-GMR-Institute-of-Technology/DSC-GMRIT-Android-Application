@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -39,7 +40,7 @@ public class EventsDisplayAdapter extends RecyclerView.Adapter<EventsDisplayAdap
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
 
-        holder.txtLearnMore.setOnClickListener(new View.OnClickListener() {
+        holder.cardLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -66,12 +67,14 @@ public class EventsDisplayAdapter extends RecyclerView.Adapter<EventsDisplayAdap
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         RelativeLayout relativeLayout;
+        LinearLayout cardLayout;
         TextView txtEventName,txtLearnMore;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             relativeLayout = itemView.findViewById(R.id.relativeLayout);
+            cardLayout = itemView.findViewById(R.id.cardLayout);
             txtEventName = itemView.findViewById(R.id.txtEventName);
             txtLearnMore = itemView.findViewById(R.id.txtLearnMore);
         }

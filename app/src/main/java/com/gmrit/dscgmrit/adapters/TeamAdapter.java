@@ -54,7 +54,6 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
                 bundle.putString("roleName",teamDataList.get(position).getRoleName());
                 bundle.putString("interests", teamDataList.get(position).getInterests());
                 bundle.putString("yearDept",teamDataList.get(position).getYearDept());
-                bundle.putString("phoneNumber",teamDataList.get(position).getPhone());
                 bundle.putString("emailID",teamDataList.get(position).getEmailID());
                 intent.putExtras(bundle);
                 context.startActivity(intent);

@@ -51,6 +51,9 @@ public class EventDetailsActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(EventDetailsActivity.this, EventRegistrationActivity.class);
+                Bundle bundle1 = new Bundle();
+                bundle1.putString("eventName", eventName);
+                intent.putExtras(bundle1);
                 startActivity(intent);
 
             }

@@ -160,6 +160,7 @@
                 android:text="Description"
                 android:textSize="20dp"
                 android:layout_margin="5dp"
+                android:textStyle="bold"
                 android:fontFamily="@font/googlesans_bold"
                 android:textColor="@color/colorYellow"
                 />
@@ -204,7 +205,7 @@
                 android:textAllCaps="false"
                 android:fontFamily="@font/googlesans_regular"
                 android:text="Click Here to Register"
-                android:background="@drawable/red_bg_textview" />
+                android:background="@drawable/green_bg_textview" />
         </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>

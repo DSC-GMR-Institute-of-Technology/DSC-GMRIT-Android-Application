@@ -9,5 +9,6 @@
     <color name="colorRed">#DB4437</color>
     <color name="semiTransparentColor">#40FFFFFF</color>
     <color name="card_background">#f6f6f6</color>
+    <color name="colorWhite">#ffffff</color>
 
 </resources>

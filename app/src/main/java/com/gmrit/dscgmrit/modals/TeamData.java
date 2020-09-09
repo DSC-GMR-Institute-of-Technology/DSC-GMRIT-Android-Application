@@ -5,7 +5,6 @@ public class TeamData {
     private String roleName;
     private String yearDept;
     private String Interests;
-    private String Phone;
     private String emailID;
     private int teamPhoto;
 
@@ -13,12 +12,11 @@ public class TeamData {
 
     }
 
-    public TeamData(String teamName, String roleName, String yearDept, String interests, String phone, String emailID, int teamPhoto) {
+    public TeamData(String teamName, String roleName, String yearDept, String interests, String emailID, int teamPhoto) {
         this.teamName = teamName;
         this.roleName = roleName;
         this.yearDept = yearDept;
         Interests = interests;
-        Phone = phone;
         this.emailID = emailID;
         this.teamPhoto = teamPhoto;
     }
@@ -53,14 +51,6 @@ public class TeamData {
 
     public void setInterests(String interests) {
         Interests = interests;
-    }
-
-    public String getPhone() {
-        return Phone;
-    }
-
-    public void setPhone(String phone) {
-        Phone = phone;
     }
 
     public String getEmailID() {
