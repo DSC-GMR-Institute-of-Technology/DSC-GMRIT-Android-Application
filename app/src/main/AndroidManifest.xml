@@ -9,23 +9,53 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.team.IndividualTeamDetailsActivity"></activity>
-        <activity android:name=".activities.team.TeamDisplayActivity" />
-        <activity android:name=".activities.events.EventRegistrationActivity" />
-        <activity android:name=".activities.general.CommunityRegistrationActivity" />
-        <activity android:name=".activities.general.IdeaSpotActivity" />
-        <activity android:name=".activities.general.FAQPage" />
-        <activity android:name=".activities.general.AboutPage" />
-        <activity android:name=".activities.events.EventDetailsActivity" />
-        <activity android:name=".activities.general.SplashScreen" />
-        <activity android:name=".activities.events.EventsDisplayActivity" />
-        <activity android:name=".activities.general.MainActivity">
+        <activity
+            android:name=".activities.team.IndividualTeamDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".activities.team.TeamDisplayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".activities.events.EventRegistrationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".activities.general.CommunityRegistrationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".activities.general.IdeaSpotActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".activities.general.FAQPage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".activities.general.AboutPage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".activities.events.EventDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity android:name=".activities.general.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.events.EventsDisplayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".activities.general.HomePage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
     </application>
 
 </manifest>

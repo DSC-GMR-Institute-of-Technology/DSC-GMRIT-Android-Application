@@ -42,6 +42,7 @@ public class EventDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EventDetailsActivity.this, EventsDisplayActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -54,6 +55,7 @@ public class EventDetailsActivity extends AppCompatActivity {
                 Bundle bundle1 = new Bundle();
                 bundle1.putString("eventName", eventName);
                 intent.putExtras(bundle1);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
 
             }

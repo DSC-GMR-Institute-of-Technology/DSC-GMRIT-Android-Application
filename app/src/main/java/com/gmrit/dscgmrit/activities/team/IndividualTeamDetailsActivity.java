@@ -18,7 +18,7 @@ public class IndividualTeamDetailsActivity extends AppCompatActivity {
     NestedScrollView backgroundImageLayout;
     LinearLayout teamPhoto;
     ImageView imgGithub,imgLinkedin,imgInstagram, backButton;
-    TextView txtName,txtRoleName, txtYearDept, txtInterests, txtPhone, txtEmailID;
+    TextView txtName,txtRoleName, txtYearDept, txtInterests, txtPhone, txtEmailID, txtCopyRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class IndividualTeamDetailsActivity extends AppCompatActivity {
         txtYearDept = findViewById(R.id.txtYearDept);
         txtInterests = findViewById(R.id.txtInterests);
         txtEmailID = findViewById(R.id.txtEmailID);
+        txtCopyRight = findViewById(R.id.txtCopyright);
 
         Bundle bundle = getIntent().getExtras();
         assert bundle != null;
@@ -57,6 +58,7 @@ public class IndividualTeamDetailsActivity extends AppCompatActivity {
                 imgGithub.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorGreen)));
                 imgInstagram.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorGreen)));
                 imgLinkedin.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorGreen)));
+                txtCopyRight.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.colorGreen)));
                 backButton.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorGreen)));
                 break;
             case "Web Developer":
@@ -64,6 +66,7 @@ public class IndividualTeamDetailsActivity extends AppCompatActivity {
                 imgGithub.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorBlue)));
                 imgInstagram.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorBlue)));
                 imgLinkedin.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorBlue)));
+                txtCopyRight.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.colorBlue)));
                 backButton.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorBlue)));
                 break;
             case "Media & Creatives":
@@ -72,6 +75,7 @@ public class IndividualTeamDetailsActivity extends AppCompatActivity {
                 imgGithub.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorYellow)));
                 imgInstagram.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorYellow)));
                 imgLinkedin.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorYellow)));
+                txtCopyRight.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.colorYellow)));
                 backButton.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorYellow)));
                 break;
             default:
@@ -79,6 +83,7 @@ public class IndividualTeamDetailsActivity extends AppCompatActivity {
                 imgGithub.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorRed)));
                 imgInstagram.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorRed)));
                 imgLinkedin.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorRed)));
+                txtCopyRight.setTextColor(ColorStateList.valueOf(getResources().getColor(R.color.colorRed)));
                 backButton.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorRed)));
                 break;
         }
@@ -95,6 +100,7 @@ public class IndividualTeamDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(IndividualTeamDetailsActivity.this, TeamDisplayActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

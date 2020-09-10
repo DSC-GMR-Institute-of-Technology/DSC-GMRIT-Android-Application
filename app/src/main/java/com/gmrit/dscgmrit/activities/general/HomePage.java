@@ -11,13 +11,13 @@ import com.gmrit.dscgmrit.R;
 import com.gmrit.dscgmrit.activities.events.EventsDisplayActivity;
 import com.gmrit.dscgmrit.activities.team.TeamDisplayActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class HomePage extends AppCompatActivity {
 
     LinearLayout eventsLayout, cardabout, faqs,ideas, community,cardTeam;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         eventsLayout = findViewById(R.id.cardEvents);
         cardabout = findViewById(R.id.cardAbout);
@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         cardTeam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, TeamDisplayActivity.class);
+                Intent intent = new Intent(HomePage.this, TeamDisplayActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
 
             }
@@ -38,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         community.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CommunityRegistrationActivity.class);
+                Intent intent = new Intent(HomePage.this, CommunityRegistrationActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -46,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
         ideas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, IdeaSpotActivity.class);
+                Intent intent = new Intent(HomePage.this, IdeaSpotActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -54,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
         faqs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FAQPage.class);
+                Intent intent = new Intent(HomePage.this, FAQPage.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -62,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
         eventsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, EventsDisplayActivity.class);
+                Intent intent = new Intent(HomePage.this, EventsDisplayActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -70,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
         cardabout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AboutPage.class);
+                Intent intent = new Intent(HomePage.this, AboutPage.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
 
             }

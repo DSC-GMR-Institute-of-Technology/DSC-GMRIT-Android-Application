@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -28,14 +29,28 @@ public class SplashScreen extends AppCompatActivity {
 
         imgLogo.setAnimation(anim);
 
-        try {
 
-            Intent intent = new Intent(SplashScreen.this, MainActivity.class);
-            wait(4000);
-            startActivity(intent);
-        } catch (Exception e) {
-            Toast.makeText(SplashScreen.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
+        Thread background = new Thread() {
+            public void run() {
+                try {
+
+                    // Thread will sleep for 5 seconds
+                    sleep(4*1000);
+
+                    // After 5 seconds redirect to another intent
+                    Intent intent =new Intent(getBaseContext(),HomePage.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+
+                    //Remove activity
+                    finish();
+                } catch (Exception e) {
+                }
+            }
+        };
+
+        // start thread
+        background.start();
 
     }
 }

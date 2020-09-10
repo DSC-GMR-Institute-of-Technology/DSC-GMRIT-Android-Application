@@ -1,220 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlue"
-    android:orientation="vertical"
     tools:context=".activities.events.EventDetailsActivity">
-
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBlue">
-
-    <LinearLayout
-        android:id="@+id/imageLayout"
-        android:layout_width="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/eventImage"
-            android:src="@drawable/dsc_info_1"
-            android:layout_alignParentStart="true"
-            android:scaleType="fitXY"
-            android:layout_alignParentTop="true" />
-
-    </LinearLayout>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/eventsToolBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:theme="@style/CardView.Light"
-        app:titleMarginStart="40dp">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:gravity="center_vertical"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:id="@+id/back_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    app:tint="#fff"
-                    android:background="@drawable/red_bg_textview"
-                    android:src="@drawable/ic_baseline_keyboard_backspace_24" />
-
-            </LinearLayout>
-        </FrameLayout>
-
-    </androidx.appcompat.widget.Toolbar>
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:background="@color/colorBlue"
-        android:padding="10dp"
-        android:id="@+id/eventIntroSession"
-        android:layout_below="@id/imageLayout"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DSC Introduction Session"
-            android:fontFamily="@font/googlesans_bold"
-            android:textColor="#fff"
-            android:layout_margin="2dp"
-            android:id="@+id/txteventTitle"
-            android:textSize="22dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:drawableStart="@drawable/ic_baseline_calendar_today_24"
-            android:drawableTint="#fff"
-            android:padding="8dp"
-            android:drawablePadding="8dp"
-            android:text="Wednesday, September 09 2020"
-            android:fontFamily="@font/googlesans_regular"
-            android:textColor="#fff" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:drawableStart="@drawable/ic_baseline_access_time_24"
-            android:drawableTint="#fff"
-            android:padding="8dp"
-            android:drawablePadding="8dp"
-            android:text="6.30 PM - 7.30 PM  IST"
-            android:fontFamily="@font/googlesans_regular"
-            android:textColor="#fff" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:drawableStart="@drawable/ic_baseline_desktop_windows_24"
-            android:drawableTint="#fff"
-            android:padding="8dp"
-            android:drawablePadding="8dp"
-            android:text="Online Mode"
-            android:fontFamily="@font/googlesans_regular"
-            android:textColor="#fff" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:drawableStart="@drawable/ic_rupee_indian"
-            android:drawableTint="#fff"
-            android:padding="8dp"
-            android:drawablePadding="8dp"
-            android:text="Free"
-            android:fontFamily="@font/googlesans_regular"
-            android:textColor="#fff" />
-
-    </LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardElevation="8dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="-25dp"
-        android:layout_below="@id/eventIntroSession"
-        app:cardCornerRadius="35dp">
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="15dp"
-            android:orientation="vertical">
+            android:background="@color/colorBlue">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:textSize="20dp"
-                android:layout_margin="5dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/googlesans_bold"
-                android:textColor="@color/colorYellow"
-                />
-
-            <TextView
+            <LinearLayout
+                android:id="@+id/imageLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/googlesans_regular"
-                android:padding="3dp"
-                android:layout_marginStart="5dp"
-                android:text="Hello Folks, We are going to Discuss about What is Developer Student Clubs about and We are going to dicuss about the Future Events going to Conduct. We are going to come up with a Demo of our Core Team and their Roles. We are going to Discuss about the Steps taken to Join our Community. "
-                android:justificationMode="inter_word"  />
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Speaker"
-                android:textSize="20dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/googlesans_bold"
-                android:textColor="@color/colorYellow"
-                />
+                <ImageView
+                    android:id="@+id/eventImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dsc_info_1" />
 
-            <TextView
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/eventsToolBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/googlesans_regular"
-                android:padding="3dp"
-                android:layout_marginStart="5dp"
-                android:text="Koushik Modekurti, DSC Lead, GMRIT"
-                android:justificationMode="inter_word"  />
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:theme="@style/CardView.Light"
+                app:titleMarginStart="40dp">
 
-            <Button
-                android:layout_width="wrap_content"
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/back_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/red_bg_textview"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                            app:tint="#fff" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/eventIntroSession"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:textColor="#fff"
-                android:padding="15dp"
-                android:id="@+id/btnEventRegister"
-                android:textAllCaps="false"
-                android:fontFamily="@font/googlesans_regular"
-                android:text="Click Here to Register"
-                android:background="@drawable/green_bg_textview" />
-        </LinearLayout>
+                android:layout_below="@id/imageLayout"
+                android:background="@color/colorBlue"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-        </androidx.core.widget.NestedScrollView>
+                <TextView
+                    android:id="@+id/txteventTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:text="DSC Introduction Session"
+                    android:textColor="#fff"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#fff"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:padding="8dp"
+                    android:text="Wednesday, September 09 2020"
+                    android:textColor="#fff"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_access_time_24"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#fff"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:padding="8dp"
+                    android:text="6.30 PM - 7.30 PM  IST"
+                    android:textColor="#fff"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_desktop_windows_24"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#fff"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:padding="8dp"
+                    android:text="Online Mode"
+                    android:textColor="#fff"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_rupee_indian"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#fff"
+                    android:fontFamily="@font/googlesans_regular"
+                    android:padding="8dp"
+                    android:text="Free"
+                    android:textColor="#fff"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/eventIntroSession"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="-25dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="8dp">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/googlesans_bold"
+                            android:text="Description"
+                            android:textColor="@color/colorYellow"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/googlesans_regular"
+                            android:justificationMode="inter_word"
+                            android:padding="3dp"
+                            android:text="Hello Folks, We are going to Discuss about What is Developer Student Clubs about and We are going to dicuss about the Future Events going to Conduct. We are going to come up with a Demo of our Core Team and their Roles. We are going to Discuss about the Steps taken to Join our Community. " />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/googlesans_bold"
+                            android:text="Speaker"
+                            android:textColor="@color/colorYellow"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/googlesans_regular"
+                            android:justificationMode="inter_word"
+                            android:padding="3dp"
+                            android:text="Koushik Modekurti, DSC Lead, GMRIT" />
+
+                        <Button
+                            android:id="@+id/btnEventRegister"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/green_bg_textview"
+                            android:fontFamily="@font/googlesans_regular"
+                            android:padding="15dp"
+                            android:text="Click Here to Register"
+                            android:textAllCaps="false"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="20dp"
+                            android:text="© Copyright DSC - GMRIT, 2020"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
 
 
-    </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
 
 
     </RelativeLayout>
 
-
-</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

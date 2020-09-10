@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.gmrit.dscgmrit.R;
-import com.gmrit.dscgmrit.activities.general.MainActivity;
+import com.gmrit.dscgmrit.activities.general.HomePage;
 import com.gmrit.dscgmrit.adapters.EventsDisplayAdapter;
 import com.gmrit.dscgmrit.modals.EventData;
 
@@ -38,7 +38,8 @@ public class EventsDisplayActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EventsDisplayActivity.this, MainActivity.class);
+                Intent intent = new Intent(EventsDisplayActivity.this, HomePage.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

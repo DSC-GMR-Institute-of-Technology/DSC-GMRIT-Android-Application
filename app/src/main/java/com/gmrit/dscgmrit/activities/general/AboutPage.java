@@ -38,6 +38,7 @@ public class AboutPage extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
                 String query = "https://www.linkedin.com/company/developer-student-clubs-gmrit/?viewAsMember=true";
                 intent.putExtra(SearchManager.QUERY, query); // query contains search string
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -48,6 +49,7 @@ public class AboutPage extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
                 String query = "https://www.instagram.com/dsc_gmrit/";
                 intent.putExtra(SearchManager.QUERY, query); // query contains search string
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
