@@ -41,6 +41,7 @@ public class TeamDisplayActivity extends AppCompatActivity {
             }
         });
 
+
         dataList = new ArrayList<>();
 
         dataList.add(new TeamData("Mr. T.Chandrasekhara Reddy", "Faculty Advisor","Faculty, Information Technology","Robotic Process Automation, Big Data Analytics, Hadoop Programming","chandrasekhar.t@gmrit.edu.in",R.drawable.chandra_sekhar_sir));
