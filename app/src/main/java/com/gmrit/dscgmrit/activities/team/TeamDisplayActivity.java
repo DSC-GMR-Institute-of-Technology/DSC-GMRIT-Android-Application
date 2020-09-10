@@ -46,7 +46,7 @@ public class TeamDisplayActivity extends AppCompatActivity {
 
         dataList.add(new TeamData("Mr. T.Chandrasekhara Reddy", "Faculty Advisor","Faculty, Information Technology","Robotic Process Automation, Big Data Analytics, Hadoop Programming","chandrasekhar.t@gmrit.edu.in",R.drawable.chandra_sekhar_sir));
         dataList.add(new TeamData("Mr. Koushik Modekurti", "DSC Lead","4th Year, Information Technology","Android, Data Analyst, Firebase, Backend Development, Cloud Computing, Web Development, AWS","kouhsikmodekurti00@gmail.com",R.drawable.koushik_modekurti));
-        dataList.add(new TeamData("Mr. Santosh Burada", "Android Developer","4th Year, Information Technology","Android, Python, Web Development, OpenCv, Java, ML","santoshburada@gmail.com",R.drawable.santosh_burada));
+        dataList.add(new TeamData("Mr. Santosh Burada", "Android Developer","4th Year, Information Technology","Android, Python, Web Development, OpenCv, Java, ML","santu.burada99@gmail.com",R.drawable.santosh_burada));
         dataList.add(new TeamData("Mr. Vinay Sriram", "Web Developer","2nd Year, Information Technology","Web Development","vinaysriramtummidi01@gmail.com",R.drawable.vinay_sriram));
         dataList.add(new TeamData("Mr. Saikiran Kopparthi", "Android Developer","3rd Year, Information Technology", "Machine Learing, Android, Firebase, php, CSS, REST API, Web Development, HTML5","knvrssaikiran@gmail.com",R.drawable.saikiran_kopparthi));
         dataList.add(new TeamData("Ms. Juhi Siri Sai Jasti", "Media & Creatives","4th Year, Computer Science Engineering","Creativity, Graphic Design","juhisirisai@gmail.com",R.drawable.juhi_siri_sai_jasti));
