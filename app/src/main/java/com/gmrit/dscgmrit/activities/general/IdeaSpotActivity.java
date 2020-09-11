@@ -16,7 +16,7 @@ public class IdeaSpotActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idea_spot);
-        back = findViewById(R.id.back_button);
+        back = findViewById(R.id.ideaSpotBackButton);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

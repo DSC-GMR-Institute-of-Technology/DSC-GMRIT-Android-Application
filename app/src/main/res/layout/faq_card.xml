@@ -66,9 +66,6 @@
             android:text="DSC, GMR Institute of Technology | DSC, GMRIT is a realm for students who are interested in Google Developer Technologies. We provide an opportunity to showcase your skills, grow knowledge in a better learning environment. With a Perfect Blend of Professionalism, we act as a catalyst to bring the required change in the Society."
             android:textColor="#000000" />
 
-
-
-
     </RelativeLayout>
 
     <ImageView

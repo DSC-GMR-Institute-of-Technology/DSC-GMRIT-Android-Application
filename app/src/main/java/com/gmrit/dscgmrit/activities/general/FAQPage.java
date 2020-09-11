@@ -28,7 +28,7 @@ public class FAQPage extends AppCompatActivity {
         setContentView(R.layout.activity_f_a_q_page);
 
         recyclerView = findViewById(R.id.faqrecy);
-        back_button = findViewById(R.id.back_button);
+        back_button = findViewById(R.id.faqsBackButton);
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

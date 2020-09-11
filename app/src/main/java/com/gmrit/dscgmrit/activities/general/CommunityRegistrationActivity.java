@@ -21,7 +21,7 @@ public class CommunityRegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_community_reg);
 
-        backButton = findViewById(R.id.back_button);
+        backButton = findViewById(R.id.communityBackButton);
         txtJoin = findViewById(R.id.textJoin);
 
         backButton.setOnClickListener(new View.OnClickListener() {

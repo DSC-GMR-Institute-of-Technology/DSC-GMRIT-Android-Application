@@ -30,7 +30,7 @@ public class TeamDisplayActivity extends AppCompatActivity {
 
         teamDataList = findViewById(R.id.teamList);
 
-        backButton = findViewById(R.id.back_button);
+        backButton = findViewById(R.id.teamBackButton);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

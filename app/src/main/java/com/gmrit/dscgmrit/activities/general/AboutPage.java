@@ -23,7 +23,7 @@ public class AboutPage extends AppCompatActivity {
 
         LinkedIn = findViewById(R.id.LinkedIn);
         Instagram = findViewById(R.id.Instagram);
-        backbutton = findViewById(R.id.back_button);
+        backbutton = findViewById(R.id.aboutBackButton);
 
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,6 +14,80 @@
         android:orientation="vertical"
         android:padding="15dp">
 
+        <!--<LinearLayout
+            android:id="@+id/ideaSpotToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                app:tint="#000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/googlesans_bold"
+                android:text="Idea Spot"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+        </LinearLayout>-->
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/ideaSpotAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/ideaSpotToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/ideaSpotBackButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.1"
+                        android:contentDescription="@string/back"
+                        android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:layout_weight="1.9"
+                        android:text="Idea Spot"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -48,7 +122,7 @@
                     android:padding="8dp"
                     android:text="Everything begins with an Idea"
                     android:textColor="#fff"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -224,6 +298,7 @@
                     android:background="@drawable/blue_bg_textview"
                     android:padding="8dp"
                     android:text="Submit your Idea"
+                    android:textSize="16sp"
                     android:textAllCaps="false"
                     android:textColor="#fff" />
 
@@ -232,56 +307,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="20dp"
-                    android:text="© Copyright DSC - GMRIT, 2020"
+                    android:text="@string/copyright_dsc_gmrit_2020"
                     android:textColor="#000"
                     android:textStyle="bold" />
 
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/restaurantToolBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="#fff"
-            android:theme="@style/CardView.Light"
-            app:titleMarginStart="40dp">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/back_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:src="@drawable/ic_baseline_keyboard_backspace_24"
-                        app:tint="#000" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/googlesans_bold"
-                        android:textStyle="bold"
-                        android:text="Idea Spot"
-                        android:textColor="#000"
-                        android:textSize="20dp" />
-
-                </LinearLayout>
-            </FrameLayout>
-
-        </androidx.appcompat.widget.Toolbar>
 
     </RelativeLayout>
 

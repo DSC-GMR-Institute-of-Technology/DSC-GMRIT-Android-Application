@@ -32,15 +32,25 @@ public class SplashScreen extends AppCompatActivity {
 
         imgLogo.startAnimation(anim);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
+        Thread background = new Thread() {
             public void run() {
+                try {
+                    // Thread will sleep for 4 seconds
+                    sleep(SPLASH_TIMER);
 
-                Intent intent =new Intent(SplashScreen.this,HomePage.class);
-                startActivity(intent);
-                finish();
+                    // After 5 seconds redirect to another intent
+                    Intent intent = new Intent(getBaseContext(), HomePage.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+
+                    //Remove activity
+                    finish();
+                } catch (Exception e) {
+                }
             }
-        },4000);
+        };
+        // start thread
+        background.start();
 
     }
 }

@@ -14,6 +14,80 @@
         android:orientation="vertical"
         android:padding="15dp">
 
+        <!--<LinearLayout
+            android:id="@+id/eventRegistrationToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                app:tint="#000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/googlesans_bold"
+                android:text="Event Registration"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>-->
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/eventRegistrationAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/eventRegistrationToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/eventRegistrationBackButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.1"
+                        android:contentDescription="@string/back"
+                        android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/googlesans_bold"
+                        android:layout_weight="1.9"
+                        android:text="Event Registration"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -196,64 +270,20 @@
                     android:text="Register for Event"
                     android:textAllCaps="false"
                     android:textColor="#fff"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="20dp"
-                    android:text="© Copyright DSC - GMRIT, 2020"
+                    android:text="@string/copyright_dsc_gmrit_2020"
                     android:textColor="#000"
                     android:textStyle="bold" />
 
             </LinearLayout>
+
         </androidx.core.widget.NestedScrollView>
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/restaurantToolBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:background="#fff"
-            android:theme="@style/CardView.Light"
-            app:titleMarginStart="40dp">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#fff"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/back_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:src="@drawable/ic_baseline_keyboard_backspace_24"
-                        app:tint="#000" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/googlesans_bold"
-                        android:text="Event Registration Form"
-                        android:textStyle="bold"
-                        android:textColor="#000"
-                        android:textSize="20dp" />
-
-                </LinearLayout>
-            </FrameLayout>
-
-        </androidx.appcompat.widget.Toolbar>
-
 
     </RelativeLayout>
 

@@ -22,7 +22,7 @@ public class EventRegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event_registration);
 
         selectedText = findViewById(R.id.selectedText);
-        backButton = findViewById(R.id.back_button);
+        backButton = findViewById(R.id.eventRegistrationBackButton);
 
         Bundle bundle = getIntent().getExtras();
         assert bundle != null;

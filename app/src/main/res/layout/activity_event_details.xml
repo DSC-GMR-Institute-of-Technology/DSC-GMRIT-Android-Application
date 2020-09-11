@@ -32,45 +32,32 @@
                     android:id="@+id/eventImage"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/dsc_info_1" />
 
             </LinearLayout>
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/eventsToolBar"
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:theme="@style/CardView.Light"
-                app:titleMarginStart="40dp">
+                android:layout_margin="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/red_bg_textview"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                    app:tint="#fff" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
+            </LinearLayout>
 
-                        <ImageView
-                            android:id="@+id/back_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/red_bg_textview"
-                            android:padding="5dp"
-                            android:src="@drawable/ic_baseline_keyboard_backspace_24"
-                            app:tint="#fff" />
-
-                    </LinearLayout>
-                </FrameLayout>
-
-            </androidx.appcompat.widget.Toolbar>
 
             <LinearLayout
                 android:id="@+id/eventIntroSession"
@@ -89,7 +76,7 @@
                     android:fontFamily="@font/googlesans_bold"
                     android:text="DSC Introduction Session"
                     android:textColor="#fff"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -101,7 +88,7 @@
                     android:padding="8dp"
                     android:text="Wednesday, September 09 2020"
                     android:textColor="#fff"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -113,7 +100,7 @@
                     android:padding="8dp"
                     android:text="6.30 PM - 7.30 PM  IST"
                     android:textColor="#fff"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -125,7 +112,7 @@
                     android:padding="8dp"
                     android:text="Online Mode"
                     android:textColor="#fff"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -137,7 +124,7 @@
                     android:padding="8dp"
                     android:text="Free"
                     android:textColor="#fff"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -168,7 +155,7 @@
                             android:fontFamily="@font/googlesans_bold"
                             android:text="Description"
                             android:textColor="@color/colorYellow"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -188,7 +175,7 @@
                             android:fontFamily="@font/googlesans_bold"
                             android:text="Speaker"
                             android:textColor="@color/colorYellow"
-                            android:textSize="20dp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -217,7 +204,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_margin="20dp"
-                            android:text="© Copyright DSC - GMRIT, 2020"
+                            android:text="@string/copyright_dsc_gmrit_2020"
                             android:textColor="#000"
                             android:textStyle="bold" />
 

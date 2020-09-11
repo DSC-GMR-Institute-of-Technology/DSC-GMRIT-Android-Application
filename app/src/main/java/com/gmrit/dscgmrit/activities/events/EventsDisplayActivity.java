@@ -33,7 +33,7 @@ public class EventsDisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
 
-        backButton = findViewById(R.id.back_button);
+        backButton = findViewById(R.id.eventsBackButton);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
