@@ -52,12 +52,14 @@ public class TeamDisplayActivity extends AppCompatActivity {
         dataList.add(new TeamData("Ms. Juhi Siri Sai Jasti", "Media & Creatives","4th Year, Computer Science Engineering","Creativity, Graphic Design","juhisirisai@gmail.com",R.drawable.juhi_siri_sai_jasti));
         dataList.add(new TeamData("Mr. Sai Teja Vankayala", "Full Stack Developer","4th Year, Computer Science Engineering","Web Development, React, Django, REST API","saitejavankayala5@gmail.com",R.drawable.saiteja_vankayala));
         dataList.add(new TeamData("Mr. Venkatesh Muvvala", "IoT Developer","4th Year, Electronics and Communications Engineering","Cyber Security, AWS, Game Development, HTML, CSS, IoT, Robotics","muvvalavenkatesh99@gmail.com",R.drawable.venkatesh_muvvala));
-
         teamAdapter = new TeamAdapter(TeamDisplayActivity.this, dataList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(TeamDisplayActivity.this, LinearLayoutManager.VERTICAL, false);
-        teamDataList.setAdapter(teamAdapter);
         teamDataList.setLayoutManager(linearLayoutManager);
+        teamDataList.setAdapter(teamAdapter);
+
 
 
     }
+
+
 }

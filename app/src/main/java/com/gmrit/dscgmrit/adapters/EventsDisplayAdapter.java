@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -14,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.bumptech.glide.Glide;
 import com.gmrit.dscgmrit.R;
 import com.gmrit.dscgmrit.activities.events.EventDetailsActivity;
 import com.gmrit.dscgmrit.modals.EventData;
@@ -55,7 +57,9 @@ public class EventsDisplayAdapter extends RecyclerView.Adapter<EventsDisplayAdap
 
         holder.txtEventName.setText(eventDataList.get(position).getEventName());
 
-        holder.relativeLayout.setBackgroundResource(eventDataList.get(position).getImages());
+        //holder.relativeLayout.setBackgroundResource(eventDataList.get(position).getImages());
+        //holder.imgBg.setImageResource(eventDataList.get(position).getImages());
+        Glide.with(context).load(eventDataList.get(position).getImages()).into(holder.imgBg);
 
     }
 
@@ -67,6 +71,7 @@ public class EventsDisplayAdapter extends RecyclerView.Adapter<EventsDisplayAdap
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         RelativeLayout relativeLayout;
+        ImageView imgBg;
         LinearLayout cardLayout;
         TextView txtEventName,txtLearnMore;
 
@@ -77,6 +82,7 @@ public class EventsDisplayAdapter extends RecyclerView.Adapter<EventsDisplayAdap
             cardLayout = itemView.findViewById(R.id.cardLayout);
             txtEventName = itemView.findViewById(R.id.txtEventName);
             txtLearnMore = itemView.findViewById(R.id.txtLearnMore);
+            imgBg = itemView.findViewById(R.id.imgBg);
         }
     }
 }

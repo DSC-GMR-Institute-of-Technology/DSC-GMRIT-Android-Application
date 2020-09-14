@@ -142,7 +142,7 @@
             android:layout_margin="20dp"
             android:text="@string/copyright_dsc_gmrit_2020"
             android:textColor="#000"
-            android:textStyle="bold" />
+            android:textStyle="bold" /> 
 
     </LinearLayout>
 

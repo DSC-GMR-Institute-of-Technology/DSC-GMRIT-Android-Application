@@ -90,7 +90,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/aboutAppBar"
-            android:layout_centerInParent="true"
             android:orientation="vertical">
 
 
@@ -98,7 +97,6 @@
                 android:id="@+id/imgDSCGMRITLogo"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:justificationMode="inter_word"
                 android:padding="15dp"
                 android:src="@drawable/dsclogo" />
 
@@ -106,7 +104,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/googlesans_regular"
-                android:justificationMode="inter_word"
                 android:padding="15dp"
                 android:text="Google DSC is a Developer Student Club which is a technical community that combines all the university students, and all the other students who learn, share ideas and come up with viable projects that are likely to solve day to day universe problems."
                 android:textColor="#000"
@@ -116,7 +113,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/googlesans_regular"
-                android:justificationMode="inter_word"
                 android:padding="15dp"
                 android:text="@string/the_clubs_are_intended_as_a_space_for_students_to_try_out_new_ideas_and_collaborate_to_solve_mobile_and_web_development_problems"
                 android:textColor="#000"
@@ -126,7 +122,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/googlesans_regular"
-                android:justificationMode="inter_word"
                 android:padding="15dp"
                 android:text="DSC, GMR Institute of Technology is a realm for students who are interested in Google Developer Technologies. We provide an opportunity to showcase your skills, grow knowledge in a better learning environment. With a Perfect Blend of Professionalism, we act as a catalyst to bring the required change in the Society."
                 android:textColor="#000"
@@ -138,7 +133,6 @@
                 android:layout_margin="15dp"
                 android:background="@drawable/blue_bg_textview"
                 android:gravity="center_horizontal"
-                android:justificationMode="inter_word"
                 android:padding="5dp"
                 android:text="Contact us at dsc.gmrit@gmail.com"
                 android:textColor="#fff"

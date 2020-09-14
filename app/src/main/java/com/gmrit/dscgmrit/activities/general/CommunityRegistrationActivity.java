@@ -9,11 +9,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.gmrit.dscgmrit.R;
 
 public class CommunityRegistrationActivity extends AppCompatActivity {
 
-    ImageView backButton;
+    ImageView backButton,topImage;
     TextView txtJoin;
 
     @Override
@@ -23,6 +24,9 @@ public class CommunityRegistrationActivity extends AppCompatActivity {
 
         backButton = findViewById(R.id.communityBackButton);
         txtJoin = findViewById(R.id.textJoin);
+        topImage = findViewById(R.id.topImage);
+
+        Glide.with(this).load(R.drawable.teamwork).into(topImage);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

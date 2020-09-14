@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.gmrit.dscgmrit.R;
 import com.gmrit.dscgmrit.activities.team.IndividualTeamDetailsActivity;
 import com.gmrit.dscgmrit.modals.TeamData;
@@ -39,7 +41,8 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.imageView.setBackgroundResource(teamDataList.get(position).getTeamPhoto());
+        //holder.imageView.setImageResource(teamDataList.get(position).getTeamPhoto());
+        Glide.with(context).load(teamDataList.get(position).getTeamPhoto()).into(holder.imageView);
         holder.txtTeamName.setText(teamDataList.get(position).getTeamName());
 
         holder.txtRoleName.setText(teamDataList.get(position).getRoleName());
@@ -60,16 +63,22 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
             }
         });
 
-        if(teamDataList.get(position).getRoleName().equals("Android Developer")) {
-            holder.txtRoleName.setBackgroundResource(R.drawable.green_bg_textview);
-        } else if(teamDataList.get(position).getRoleName().equals("Web Developer")) {
-            holder.txtRoleName.setBackgroundResource(R.drawable.blue_bg_textview);
-        } else if (teamDataList.get(position).getRoleName().equals("Media & Creatives")) {
-            holder.txtRoleName.setBackgroundResource(R.drawable.yellow_bg_textview);
-        } else if(teamDataList.get(position).getRoleName().equals("Faculty Advisor")){
-            holder.txtRoleName.setBackgroundResource(R.drawable.yellow_bg_textview);
-        } else {
-            holder.txtRoleName.setBackgroundResource(R.drawable.red_bg_textview);
+        switch (teamDataList.get(position).getRoleName()) {
+            case "Android Developer":
+                holder.txtRoleName.setBackgroundResource(R.drawable.green_bg_textview);
+                break;
+            case "Web Developer":
+                holder.txtRoleName.setBackgroundResource(R.drawable.blue_bg_textview);
+                break;
+            case "Media & Creatives":
+                holder.txtRoleName.setBackgroundResource(R.drawable.yellow_bg_textview);
+                break;
+            case "Faculty Advisor":
+                holder.txtRoleName.setBackgroundResource(R.drawable.yellow_bg_textview);
+                break;
+            default:
+                holder.txtRoleName.setBackgroundResource(R.drawable.red_bg_textview);
+                break;
         }
     }
 
@@ -80,7 +89,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        LinearLayout imageView;
+        ImageView imageView;
         TextView txtTeamName,txtRoleName, txtViewMore;
         RelativeLayout relativeLayout;
 

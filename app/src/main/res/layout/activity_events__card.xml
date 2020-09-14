@@ -20,9 +20,15 @@
             android:padding="8dp"
             android:id="@+id/relativeLayout"
             android:gravity="bottom"
-            android:background="@drawable/dsc_info_1"
             android:fitsSystemWindows="true"
             android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dsc_info_1"
+                android:scaleType="fitXY"/>
 
                 <TextView
                     android:id="@+id/txtEventName"
