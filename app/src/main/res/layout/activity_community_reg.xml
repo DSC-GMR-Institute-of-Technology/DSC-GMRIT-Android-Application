@@ -6,20 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".activities.general.CommunityRegistrationActivity">
 
-    <RelativeLayout
-        android:layout_centerHorizontal="true"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffffff"
-        android:padding="15dp">
-
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/communityAppBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:background="#ffffff">
-
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/communityToolBar"
@@ -44,7 +36,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="?attr/actionBarSize"
-                        android:layout_margin="10dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp"
+                        android:gravity="center_vertical"
                         android:layout_weight="1.9"
                         android:fontFamily="@font/googlesans_bold"
                         android:text="Community"
@@ -76,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="210dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="20dp"
                     android:padding="10dp" />
 
                 <TextView
@@ -177,6 +171,5 @@
 
         </androidx.core.widget.NestedScrollView>
 
-    </RelativeLayout>
 
 </RelativeLayout>

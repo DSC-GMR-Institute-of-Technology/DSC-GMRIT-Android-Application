@@ -6,12 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".activities.events.EventRegistrationActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#fff"
-        android:orientation="vertical"
-        android:padding="15dp">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/eventRegistrationAppBar"
@@ -44,7 +38,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="?attr/actionBarSize"
-                        android:layout_margin="10dp"
+                        android:layout_margin="0dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp"
                         android:layout_weight="1.9"
                         android:fontFamily="@font/googlesans_bold"
                         android:text="Event Registration"
@@ -67,13 +64,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:padding="15dp"
                 android:layout_below="@+id/eventRegistrationAppBar"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="0dp"
                     android:padding="35dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/event" />
@@ -244,20 +242,10 @@
                     android:textColor="#fff"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:text="@string/copyright_dsc_gmrit_2020"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
 
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
 
-
-    </RelativeLayout>
 
 </RelativeLayout>

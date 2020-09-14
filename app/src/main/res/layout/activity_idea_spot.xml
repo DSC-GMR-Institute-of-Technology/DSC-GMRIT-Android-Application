@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".activities.general.IdeaSpotActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:background="#ffffff"
-        android:orientation="vertical"
-        android:padding="15dp">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/ideaSpotAppBar"
@@ -20,7 +13,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:background="#ffffff">
-
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/ideaSpotToolBar"
@@ -45,7 +37,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="?attr/actionBarSize"
-                        android:layout_margin="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp"
                         android:layout_weight="1.9"
                         android:fontFamily="@font/googlesans_bold"
                         android:text="Idea Spot"
@@ -59,6 +53,7 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,13 +66,14 @@
                 android:layout_below="@+id/ideaSpotAppBar"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
+                android:padding="15dp"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="210dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="0dp"
                     android:paddingLeft="-5dp"
                     android:paddingRight="-5dp"
                     android:scaleType="centerCrop"
@@ -274,21 +270,10 @@
                     android:textColor="#fff"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:text="@string/copyright_dsc_gmrit_2020"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
 
 
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
-
-
-    </RelativeLayout>
 
 </RelativeLayout>

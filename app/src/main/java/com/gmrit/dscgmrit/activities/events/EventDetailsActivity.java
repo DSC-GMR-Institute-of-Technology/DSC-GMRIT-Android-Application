@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.gmrit.dscgmrit.R;
 
 public class EventDetailsActivity extends AppCompatActivity {
@@ -16,7 +17,6 @@ public class EventDetailsActivity extends AppCompatActivity {
     ImageView eventsImage, backButton;
     Button btnEventRegister;
     TextView txtEventName;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,9 @@ public class EventDetailsActivity extends AppCompatActivity {
         int eventImage = bundle.getInt("eventImage");
 
         txtEventName.setText(eventName);
-        eventsImage.setImageResource(eventImage);
+
+        Glide.with(EventDetailsActivity.this).load(eventImage).centerCrop().into(eventsImage);
+
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
