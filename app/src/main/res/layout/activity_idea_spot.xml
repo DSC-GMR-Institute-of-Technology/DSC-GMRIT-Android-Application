@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,38 +9,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
         android:background="#ffffff"
         android:orientation="vertical"
         android:padding="15dp">
-
-        <!--<LinearLayout
-            android:id="@+id/ideaSpotToolBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/back_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:src="@drawable/ic_baseline_keyboard_backspace_24"
-                app:tint="#000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/googlesans_bold"
-                android:text="Idea Spot"
-                android:textStyle="bold"
-                android:textColor="#000"
-                android:textSize="20sp" />
-
-        </LinearLayout>-->
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/ideaSpotAppBar"
@@ -74,8 +46,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="?attr/actionBarSize"
                         android:layout_margin="10dp"
-                        android:fontFamily="@font/googlesans_bold"
                         android:layout_weight="1.9"
+                        android:fontFamily="@font/googlesans_bold"
                         android:text="Idea Spot"
                         android:textColor="#000"
                         android:textSize="20sp"
@@ -87,21 +59,25 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ideaSpotAppBar"
+            android:layout_centerHorizontal="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/ideaSpotAppBar"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:layout_below="@+id/ideaSpotAppBar"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="210dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="20dp"
                     android:paddingLeft="-5dp"
                     android:paddingRight="-5dp"
                     android:scaleType="centerCrop"
@@ -168,6 +144,7 @@
                         android:textColor="#000" />
 
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
@@ -293,9 +270,9 @@
                     android:background="@drawable/blue_bg_textview"
                     android:padding="8dp"
                     android:text="Submit your Idea"
-                    android:textSize="16sp"
                     android:textAllCaps="false"
-                    android:textColor="#fff" />
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -309,7 +286,9 @@
 
             </LinearLayout>
 
+        </androidx.core.widget.NestedScrollView>
+
 
     </RelativeLayout>
 
-</androidx.core.widget.NestedScrollView>
+</RelativeLayout>

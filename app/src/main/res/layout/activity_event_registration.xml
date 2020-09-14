@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,35 +12,6 @@
         android:background="#fff"
         android:orientation="vertical"
         android:padding="15dp">
-
-        <!--<LinearLayout
-            android:id="@+id/eventRegistrationToolBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/backButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:src="@drawable/ic_baseline_keyboard_backspace_24"
-                app:tint="#000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/googlesans_bold"
-                android:text="Event Registration"
-                android:textColor="#000"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>-->
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/eventRegistrationAppBar"
@@ -87,199 +58,206 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/eventRegistrationAppBar"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eventRegistrationAppBar"
+            android:layout_centerHorizontal="true">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginTop="30dp"
-                android:padding="35dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/event" />
+                android:layout_height="match_parent"
+                android:layout_below="@+id/eventRegistrationAppBar"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/selectedText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"
-                android:background="@drawable/blue_bg_textview"
-                android:fontFamily="@font/googlesans_regular"
-                android:padding="8dp"
-                android:text="Selected Event: DSC Info Session"
-                android:textColor="#fff" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="8dp"
-                android:hint="Enter Name of Student"
-                app:boxStrokeColor="#000"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="#000"
-                app:hintTextColor="#000"
-                app:startIconTint="#000">
-
-                <com.google.android.material.textfield.TextInputEditText
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="30dp"
+                    android:padding="35dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/event" />
+
+                <TextView
+                    android:id="@+id/selectedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/blue_bg_textview"
                     android:fontFamily="@font/googlesans_regular"
-                    android:inputType="text"
-                    android:textColor="#000" />
+                    android:padding="8dp"
+                    android:text="Selected Event: DSC Info Session"
+                    android:textColor="#fff" />
 
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="8dp"
-                android:hint="Email ID"
-                app:boxStrokeColor="#000"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="#000"
-                app:hintTextColor="#000"
-                app:startIconTint="#000">
-
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:inputType="textEmailAddress"
-                    android:textColor="#000" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:hint="Enter Name of Student"
+                    app:boxStrokeColor="#000"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="#000"
+                    app:hintTextColor="#000"
+                    app:startIconTint="#000">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/googlesans_regular"
+                        android:inputType="text"
+                        android:textColor="#000" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="8dp"
-                android:hint="Phone Number"
-                app:boxStrokeColor="#000"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="#000"
-                app:hintTextColor="#000"
-                app:startIconTint="#000">
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:inputType="number"
-                    android:maxLength="10"
-                    android:textColor="#000" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:hint="Email ID"
+                    app:boxStrokeColor="#000"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="#000"
+                    app:hintTextColor="#000"
+                    app:startIconTint="#000">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/googlesans_regular"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#000" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="8dp"
-                android:hint="College Name"
-                app:boxStrokeColor="#000"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="#000"
-                app:hintTextColor="#000"
-                app:startIconTint="#000">
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:inputType="text"
-                    android:textColor="#000" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:hint="Phone Number"
+                    app:boxStrokeColor="#000"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="#000"
+                    app:hintTextColor="#000"
+                    app:startIconTint="#000">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/googlesans_regular"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="#000" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="8dp"
-                android:hint="Roll Number"
-                app:boxStrokeColor="#000"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="#000"
-                app:hintTextColor="#000"
-                app:startIconTint="#000">
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:hint="College Name"
+                    app:boxStrokeColor="#000"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="#000"
+                    app:hintTextColor="#000"
+                    app:startIconTint="#000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/googlesans_regular"
+                        android:inputType="text"
+                        android:textColor="#000" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:hint="Roll Number"
+                    app:boxStrokeColor="#000"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="#000"
+                    app:hintTextColor="#000"
+                    app:startIconTint="#000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/googlesans_regular"
+                        android:inputType="text"
+                        android:textColor="#000" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/spinner_bg"
+                    android:entries="@array/statesList"
+                    android:focusable="true" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/spinner_bg"
+                    android:entries="@array/districtList"
+                    android:focusable="true" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/spinner_bg"
+                    android:entries="@array/citiesList"
+                    android:focusable="true" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/red_bg_textview"
                     android:fontFamily="@font/googlesans_regular"
-                    android:inputType="text"
-                    android:textColor="#000" />
+                    android:padding="8dp"
+                    android:text="Register for Event"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:text="@string/copyright_dsc_gmrit_2020"
+                    android:textColor="#000"
+                    android:textStyle="bold" />
 
+            </LinearLayout>
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/spinner_bg"
-                android:entries="@array/statesList"
-                android:focusable="true" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/spinner_bg"
-                android:entries="@array/districtList"
-                android:focusable="true" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/spinner_bg"
-                android:entries="@array/citiesList"
-                android:focusable="true" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"
-                android:background="@drawable/red_bg_textview"
-                android:fontFamily="@font/googlesans_regular"
-                android:padding="8dp"
-                android:text="Register for Event"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="20dp"
-                android:text="@string/copyright_dsc_gmrit_2020"
-                android:textColor="#000"
-                android:textStyle="bold" />
-
-        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
 
     </RelativeLayout>
 
-</androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -384,28 +384,6 @@
             android:textColor="#000"
             android:textStyle="bold" />
 
-
-        <!--<ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/menuCards2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="-65dp"
-            android:layout_marginBottom="-50dp"
-            android:src="@drawable/circle"
-            app:tint="#0F9D58" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/menuCards2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/circle"
-            app:tint="#F4B400" />-->
-
     </RelativeLayout>
 
 </androidx.core.widget.NestedScrollView>
