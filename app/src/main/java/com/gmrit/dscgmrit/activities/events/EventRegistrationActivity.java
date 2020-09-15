@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.gmrit.dscgmrit.R;
 
 import org.w3c.dom.Text;
@@ -14,7 +15,7 @@ import org.w3c.dom.Text;
 public class EventRegistrationActivity extends AppCompatActivity {
 
     TextView selectedText;
-    ImageView backButton;
+    ImageView backButton, eventRegistrationImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,9 @@ public class EventRegistrationActivity extends AppCompatActivity {
 
         selectedText = findViewById(R.id.selectedText);
         backButton = findViewById(R.id.eventRegistrationBackButton);
+        eventRegistrationImage = findViewById(R.id.eventRegistrationImage);
+
+        Glide.with(this).load(R.drawable.event).into(eventRegistrationImage);
 
         Bundle bundle = getIntent().getExtras();
         assert bundle != null;
@@ -35,8 +39,6 @@ public class EventRegistrationActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-
 
 
     }

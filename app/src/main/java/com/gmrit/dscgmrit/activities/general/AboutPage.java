@@ -9,12 +9,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.gmrit.dscgmrit.R;
 
 import java.net.URLEncoder;
 
 public class AboutPage extends AppCompatActivity {
-    ImageView LinkedIn, Instagram, backbutton;
+    ImageView LinkedIn, Instagram, backbutton, logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,9 @@ public class AboutPage extends AppCompatActivity {
         LinkedIn = findViewById(R.id.LinkedIn);
         Instagram = findViewById(R.id.Instagram);
         backbutton = findViewById(R.id.aboutBackButton);
+        logo = findViewById(R.id.imgDSCGMRITLogo);
+
+        Glide.with(this).load(R.drawable.dsclogo).into(logo);
 
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override

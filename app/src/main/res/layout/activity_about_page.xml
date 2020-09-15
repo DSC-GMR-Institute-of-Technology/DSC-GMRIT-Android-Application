@@ -7,159 +7,157 @@
     tools:context=".activities.general.AboutPage">
 
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/aboutAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/aboutAppBar"
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/aboutToolBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:background="#ffffff">
-
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/aboutToolBar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
-
-                    <ImageView
-                        android:id="@+id/aboutBackButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.1"
-                        android:contentDescription="@string/back"
-                        android:src="@drawable/ic_baseline_keyboard_backspace_24" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="?attr/actionBarSize"
-                        android:paddingStart="5dp"
-                        android:paddingEnd="0dp"
-                        android:gravity="center_vertical"
-                        android:layout_weight="1.9"
-                        android:fontFamily="@font/googlesans_bold"
-                        android:text="About Us"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </androidx.appcompat.widget.Toolbar>
-
-        </com.google.android.material.appbar.AppBarLayout>
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/aboutAppBar"
-            android:layout_centerHorizontal="true">
+            android:layout_height="?attr/actionBarSize">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/aboutAppBar"
-                android:padding="15dp"
-                android:orientation="vertical">
-
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <ImageView
-                    android:id="@+id/imgDSCGMRITLogo"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="15dp"
-                    android:src="@drawable/dsclogo" />
-
-                <TextView
+                    android:id="@+id/aboutBackButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:padding="15dp"
-                    android:text="Google DSC is a Developer Student Club which is a technical community that combines all the university students, and all the other students who learn, share ideas and come up with viable projects that are likely to solve day to day universe problems."
-                    android:textColor="#000"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:padding="15dp"
-                    android:text="@string/the_clubs_are_intended_as_a_space_for_students_to_try_out_new_ideas_and_collaborate_to_solve_mobile_and_web_development_problems"
-                    android:textColor="#000"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/googlesans_regular"
-                    android:padding="15dp"
-                    android:text="DSC, GMR Institute of Technology is a realm for students who are interested in Google Developer Technologies. We provide an opportunity to showcase your skills, grow knowledge in a better learning environment. With a Perfect Blend of Professionalism, we act as a catalyst to bring the required change in the Society."
-                    android:textColor="#000"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/blue_bg_textview"
-                    android:gravity="center_horizontal"
-                    android:padding="5dp"
-                    android:text="Contact us at dsc.gmrit@gmail.com"
-                    android:textColor="#fff"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/Github"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="10dp"
-                        android:src="@drawable/ic_github_logo" />
-
-                    <ImageView
-                        android:id="@+id/Instagram"
-                        android:layout_width="40dp"
-
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:src="@drawable/ic_instagram_logo" />
-
-
-                    <ImageView
-                        android:id="@+id/LinkedIn"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="10dp"
-                        android:src="@drawable/ic_linkedin"
-                        app:tint="#000" />
-
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/copyright_dsc_gmrit_2020"
+                    android:layout_weight="0.1"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_weight="1.9"
+                    android:fontFamily="@font/googlesans_bold"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp"
+                    android:text="About Us"
                     android:textColor="#000"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
-        </androidx.core.widget.NestedScrollView>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aboutAppBar"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/aboutAppBar"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+
+            <ImageView
+                android:id="@+id/imgDSCGMRITLogo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/googlesans_regular"
+                android:padding="15dp"
+                android:text="Google DSC is a Developer Student Club which is a technical community that combines all the university students, and all the other students who learn, share ideas and come up with viable projects that are likely to solve day to day universe problems."
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/googlesans_regular"
+                android:padding="15dp"
+                android:text="@string/the_clubs_are_intended_as_a_space_for_students_to_try_out_new_ideas_and_collaborate_to_solve_mobile_and_web_development_problems"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/googlesans_regular"
+                android:padding="15dp"
+                android:text="DSC, GMR Institute of Technology is a realm for students who are interested in Google Developer Technologies. We provide an opportunity to showcase your skills, grow knowledge in a better learning environment. With a Perfect Blend of Professionalism, we act as a catalyst to bring the required change in the Society."
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/blue_bg_textview"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="Contact us at dsc.gmrit@gmail.com"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Github"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_github_logo" />
+
+                <ImageView
+                    android:id="@+id/Instagram"
+                    android:layout_width="40dp"
+
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_instagram_logo" />
+
+
+                <ImageView
+                    android:id="@+id/LinkedIn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_linkedin"
+                    app:tint="#000" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/copyright_dsc_gmrit_2020"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>

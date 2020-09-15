@@ -70,14 +70,14 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/ideaSpotImage"
                     android:layout_width="match_parent"
                     android:layout_height="210dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
                     android:paddingLeft="-5dp"
                     android:paddingRight="-5dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ideas_stock" />
+                    android:scaleType="centerCrop" />
 
                 <TextView
                     android:id="@+id/selectedText"
