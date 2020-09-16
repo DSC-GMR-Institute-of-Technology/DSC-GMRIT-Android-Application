@@ -20,7 +20,7 @@ public class IdeaSpotActivity extends AppCompatActivity {
         back = findViewById(R.id.ideaSpotBackButton);
         ideaSpotImage = findViewById(R.id.ideaSpotImage);
 
-        Glide.with(this).load(R.drawable.ideas_stock).into(ideaSpotImage);
+        Glide.with(IdeaSpotActivity.this).load(R.drawable.ideas_stock).into(ideaSpotImage);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
