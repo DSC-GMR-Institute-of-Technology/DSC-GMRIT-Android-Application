@@ -21,6 +21,8 @@ import com.gmrit.dscgmrit.modals.TeamData;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
     Context context;
@@ -43,6 +45,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
         //holder.imageView.setImageResource(teamDataList.get(position).getTeamPhoto());
         Glide.with(context).load(teamDataList.get(position).getTeamPhoto()).into(holder.imageView);
+        //holder.imageView.setImageResource(teamDataList.get(position).getTeamPhoto());
         holder.txtTeamName.setText(teamDataList.get(position).getTeamName());
 
         holder.txtRoleName.setText(teamDataList.get(position).getRoleName());
@@ -66,18 +69,23 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
         switch (teamDataList.get(position).getRoleName()) {
             case "Android Developer":
                 holder.txtRoleName.setBackgroundResource(R.drawable.green_bg_textview);
+                holder.imageView.setBorderColor(context.getResources().getColor(R.color.colorGreen));
                 break;
             case "Web Developer":
                 holder.txtRoleName.setBackgroundResource(R.drawable.blue_bg_textview);
+                holder.imageView.setBorderColor(context.getResources().getColor(R.color.colorBlue));
                 break;
             case "Media & Creatives":
                 holder.txtRoleName.setBackgroundResource(R.drawable.yellow_bg_textview);
+                holder.imageView.setBorderColor(context.getResources().getColor(R.color.colorYellow));
                 break;
             case "Faculty Advisor":
                 holder.txtRoleName.setBackgroundResource(R.drawable.yellow_bg_textview);
+                holder.imageView.setBorderColor(context.getResources().getColor(R.color.colorYellow));
                 break;
             default:
                 holder.txtRoleName.setBackgroundResource(R.drawable.red_bg_textview);
+                holder.imageView.setBorderColor(context.getResources().getColor(R.color.colorRed));
                 break;
         }
     }
@@ -89,7 +97,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imageView;
+        CircleImageView imageView;
         TextView txtTeamName,txtRoleName, txtViewMore;
         RelativeLayout relativeLayout;
 
