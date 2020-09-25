@@ -27,4 +27,5 @@ public class EventData {
     public void setImages(Integer images) {
         this.images = images;
     }
+
 }

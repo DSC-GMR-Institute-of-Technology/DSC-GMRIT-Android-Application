@@ -8,14 +8,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.gmrit.dscgmrit.R;
 import com.gmrit.dscgmrit.activities.general.HomePage;
 import com.gmrit.dscgmrit.adapters.TeamAdapter;
+import com.gmrit.dscgmrit.api.ApiInterface;
+import com.gmrit.dscgmrit.api.RetrofitClient;
 import com.gmrit.dscgmrit.modals.TeamData;
+import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class TeamDisplayActivity extends AppCompatActivity {
 
@@ -41,21 +49,48 @@ public class TeamDisplayActivity extends AppCompatActivity {
             }
         });
 
-
         dataList = new ArrayList<>();
 
-        dataList.add(new TeamData("Mr. T.Chandrasekhara Reddy", "Faculty Advisor","Faculty, Information Technology","Robotic Process Automation, Big Data Analytics, Hadoop Programming","chandrasekhar.t@gmrit.edu.in",R.drawable.chandra_sekhar_sir));
-        dataList.add(new TeamData("Mr. Koushik Modekurti", "DSC Lead","4th Year, Information Technology","Android, Data Analyst, Firebase, Backend Development, Cloud Computing, Web Development, AWS","kouhsikmodekurti00@gmail.com",R.drawable.koushik_modekurti));
-        dataList.add(new TeamData("Mr. Santosh Burada", "Android Developer","4th Year, Information Technology","Android, Python, Web Development, OpenCv, Java, ML","santu.burada99@gmail.com",R.drawable.santosh_burada));
-        dataList.add(new TeamData("Mr. Vinay Sriram", "Web Developer","2nd Year, Information Technology","Web Development","vinaysriramtummidi01@gmail.com",R.drawable.vinay_sriram));
-        dataList.add(new TeamData("Mr. Saikiran Kopparthi", "Android Developer","3rd Year, Information Technology", "Machine Learing, Android, Firebase, php, CSS, REST API, Web Development, HTML5","knvrssaikiran@gmail.com",R.drawable.saikiran_kopparthi));
-        dataList.add(new TeamData("Ms. Juhi Siri Sai Jasti", "Media & Creatives","4th Year, Computer Science Engineering","Creativity, Graphic Design","juhisirisai@gmail.com",R.drawable.juhi_siri_sai_jasti));
-        dataList.add(new TeamData("Mr. Sai Teja Vankayala", "Full Stack Developer","4th Year, Computer Science Engineering","Web Development, React, Django, REST API","saitejavankayala5@gmail.com",R.drawable.saiteja_vankayala));
-        dataList.add(new TeamData("Mr. Venkatesh Muvvala", "IoT Developer","4th Year, Electronics and Communications Engineering","Cyber Security, AWS, Game Development, HTML, CSS, IoT, Robotics","muvvalavenkatesh99@gmail.com",R.drawable.venkatesh_muvvala));
-        teamAdapter = new TeamAdapter(TeamDisplayActivity.this, dataList);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(TeamDisplayActivity.this, LinearLayoutManager.VERTICAL, false);
-        teamDataList.setLayoutManager(linearLayoutManager);
-        teamDataList.setAdapter(teamAdapter);
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("parameter", "core team");
+
+        ApiInterface apiInterface = RetrofitClient.getClient(this).create(ApiInterface.class);
+
+        apiInterface.processTeamDetails(jsonObject).enqueue(new Callback<TeamData>() {
+            @Override
+            public void onResponse(Call<TeamData> call, Response<TeamData> response) {
+                if(response.isSuccessful()) {
+
+                    TeamData teamData = response.body();
+
+                    assert teamData != null;
+
+                    if(teamData.isStatus()) {
+
+                        List<TeamData.DataBean> resultBean = teamData.getData();
+
+                        teamAdapter = new TeamAdapter(TeamDisplayActivity.this, resultBean);
+                        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(TeamDisplayActivity.this, LinearLayoutManager.VERTICAL, false);
+                        teamDataList.setLayoutManager(linearLayoutManager);
+                        teamDataList.setAdapter(teamAdapter);
+
+                    }
+
+                } else {
+                    Toast.makeText(TeamDisplayActivity.this, "Something Error Occurred !", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<TeamData> call, Throwable t) {
+
+            }
+        });
+
+
+
+
+
 
 
 

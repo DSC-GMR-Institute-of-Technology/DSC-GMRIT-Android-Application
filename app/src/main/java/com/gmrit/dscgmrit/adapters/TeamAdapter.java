@@ -26,9 +26,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
     Context context;
-     List<TeamData> teamDataList;
+     List<TeamData.DataBean> teamDataList;
 
-    public TeamAdapter(Context context, List<TeamData> teamDataList) {
+    public TeamAdapter(Context context, List<TeamData.DataBean> teamDataList) {
         this.context = context;
         this.teamDataList = teamDataList;
     }
@@ -44,29 +44,29 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         //holder.imageView.setImageResource(teamDataList.get(position).getTeamPhoto());
-        Glide.with(context).load(teamDataList.get(position).getTeamPhoto()).into(holder.imageView);
+        Glide.with(context).load(teamDataList.get(position).getMember_photo_url()).into(holder.imageView);
         //holder.imageView.setImageResource(teamDataList.get(position).getTeamPhoto());
-        holder.txtTeamName.setText(teamDataList.get(position).getTeamName());
+        holder.txtTeamName.setText(teamDataList.get(position).getMember_name());
 
-        holder.txtRoleName.setText(teamDataList.get(position).getRoleName());
+        holder.txtRoleName.setText(teamDataList.get(position).getMember_designation());
 
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, IndividualTeamDetailsActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("name",teamDataList.get(position).getTeamName());
-                bundle.putInt("imageTeamPhoto",teamDataList.get(position).getTeamPhoto());
-                bundle.putString("roleName",teamDataList.get(position).getRoleName());
-                bundle.putString("interests", teamDataList.get(position).getInterests());
-                bundle.putString("yearDept",teamDataList.get(position).getYearDept());
-                bundle.putString("emailID",teamDataList.get(position).getEmailID());
+                bundle.putString("name",teamDataList.get(position).getMember_name());
+                bundle.putString("imageTeamPhoto",teamDataList.get(position).getMember_photo_url());
+                bundle.putString("roleName",teamDataList.get(position).getMember_designation());
+                bundle.putString("interests", teamDataList.get(position).getMember_interests());
+                bundle.putString("yearDept",teamDataList.get(position).getMember_department());
+                bundle.putString("emailID",teamDataList.get(position).getMember_email());
                 intent.putExtras(bundle);
                 context.startActivity(intent);
             }
         });
 
-        switch (teamDataList.get(position).getRoleName()) {
+        switch (teamDataList.get(position).getMember_designation()) {
             case "Android Developer":
                 holder.txtRoleName.setBackgroundResource(R.drawable.green_bg_textview);
                 holder.imageView.setBorderColor(context.getResources().getColor(R.color.colorGreen));
